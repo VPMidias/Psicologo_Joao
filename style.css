@@ -1,0 +1,106 @@
+@import url("variables.css");
+
+* {
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+}
+
+.navbar-custom {
+  transition: background-color 0.4s ease;
+  background-color: transparent;
+  z-index: 1000; /* garante que fica acima do banner */
+}
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra leve */
+}
+
+/* Banner ocupa a tela inteira no topo */
+.banner {
+  position: relative;
+  height: 105vh;
+  background: url("./assets/image.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 4rem 0;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.beneficios {
+  height: 375px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url("./assets/fundo-beneficios.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  top: -40px;
+}
+
+.beneficio-item {
+  background: transparent;
+}
+
+.beneficio-item .icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beneficio-titulo,
+.beneficio-texto {
+  color: var(--white-color);
+}
+@media (max-width: 991px) {
+  .banner {
+    height: 105vh;
+  }
+  .navbar-custom {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .beneficios {
+    height: 700px;
+    top: -80px;
+    background-image: url("./assets/fundo-beneficios-tab.png");
+  }
+}
+
+@media (max-width: 575px) {
+  .banner {
+    height: auto;
+  }
+  .navbar-custom {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .beneficios {
+    background-image: url("./assets/fundo-beneficios-fone.png");
+    height: 1000px;
+  }
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  border-radius: 8px;
+  padding: 0.6rem 3rem;
+  transition: 0.5s ease;
+}
+
+.btn-primary:hover {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+}

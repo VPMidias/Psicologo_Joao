@@ -1,0 +1,11 @@
+:root {
+
+  --primary-color: #084E7F;
+  --secondary-color: #001938;
+
+  --text-color: #000D1E;
+  --white-color: #F9FAFB;
+
+  --font-main: "Roboto", sans-serif;
+  --font-size-base: 1rem;
+}

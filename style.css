@@ -30,7 +30,6 @@
 
 .banner h1 {
   font-size: 3rem;
-  font-weight: bold;
 }
 
 .beneficios {
@@ -70,12 +69,46 @@
   background: var(--secondary-color);
   width: 500px;
   height: 400px;
-  margin: 0 auto;
 }
 .bg-img img {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.funcionamento {
+  height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url("./assets/fundo-funcionamento.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  color: white;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #d9d9d9; /* placeholder para círculo */
+  margin: 0 auto 20px;
+}
+.btn-custom {
+  margin-top: 30px;
+  background-color: #fff;
+  color: #1b1e3a;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+.info-text {
+  max-width: 250px;
+  margin: 0 auto;
+}
+.trabalhar {
+  height: 700px;
 }
 
 @media (max-width: 991px) {
@@ -106,11 +139,9 @@
     height: 1050px;
   }
 
-  .bg-img{
-    width: 100% ;
+  .bg-img {
+    width: 100%;
   }
-
- 
 }
 
 .btn-primary {
@@ -123,4 +154,31 @@
 .btn-primary:hover {
   background: var(--secondary-color);
   transform: scale(1.05);
+}
+
+/* seçaão de duvidas */
+.duvidas {
+  padding: 4rem 0;
+}
+
+.accordion-item {
+  margin-bottom: 0.5rem;
+}
+.accordion-button {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.accordion-button::after {
+  fill: var(--white-color);
+}
+
+.footer-header {
+  background: var(--secondary-color);
+  height: 300px;
+}
+
+.footer-rodape {
+  background: var(--text-color);
+  height: 96px;
 }

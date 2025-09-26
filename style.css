@@ -64,6 +64,20 @@
 .beneficio-texto {
   color: var(--white-color);
 }
+
+.bg-img {
+  position: relative;
+  background: var(--secondary-color);
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+.bg-img img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 @media (max-width: 991px) {
   .banner {
     height: 105vh;
@@ -89,8 +103,14 @@
 
   .beneficios {
     background-image: url("./assets/fundo-beneficios-fone.png");
-    height: 1000px;
+    height: 1050px;
   }
+
+  .bg-img{
+    width: 100% ;
+  }
+
+ 
 }
 
 .btn-primary {

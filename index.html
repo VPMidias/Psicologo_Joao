@@ -33,6 +33,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
+    <link rel="preload" as="image" href="./assets/image.png" fetchpriority="high">
   </head>
 
   <body>
@@ -203,7 +205,8 @@
                 src="./assets/image-psicologo.png"
                 alt="Psicólogo João Victor"
                 class="img-fluid"
-                loading="lazy"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
 

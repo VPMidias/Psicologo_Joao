@@ -71,6 +71,7 @@ body {
 
 .sobre {
   position: relative;
+  padding: 2rem 0;
 }
 
 .sobre-bg {
@@ -81,8 +82,6 @@ body {
   height: 100%;
   background: var(--white-color);
   z-index: -1;
-
-  /* aumenta 20% da altura e centraliza */
   transform: translateY(-50%) scaleY(2);
   transform-origin: center top;
 }
@@ -206,6 +205,9 @@ footer i {
     top: -80px;
     background-image: url("./assets/fundo-beneficios-tab.png");
   }
+  .funcionamento {
+    height: 900px;
+  }
 }
 @media (max-width: 769px) {
   .funcionamento {
@@ -230,24 +232,18 @@ footer i {
   }
 }
 
-.swiper{
-  height: 250px;
+.swiper {
+  height: 270px;
+  padding: 0 2rem;
 }
 
 .swiper-slide {
-  height: fit-content;
-  border: 1px solid #0c1f3b;
-  border-radius: 10px;
+  border: 1.5px solid #004080;
+  border-radius: 12px;
   padding: 20px;
   background-color: #fff;
   text-align: left;
-}
-
-.swiper-slide img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
+  height: fit-content;
 }
 
 .person-info {
@@ -256,21 +252,164 @@ footer i {
   margin-bottom: 10px;
 }
 
+.person-info img {
+  border-radius: 50%;
+  border: 3px solid #003366;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
 .person-name {
-  color: #0c1f3b;
-  font-weight: 500;
+  color: #004080;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.swiper-pagination {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .swiper-pagination-bullet {
   background-color: #0c1f3b;
-  opacity: 1;
+  opacity: 0.4;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #001737;
+  background-color: #0c1f3b;
+  opacity: 1;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #001737;
+/* Botões de navegação */
+ .swiper-button-next,
+ .swiper-button-prev {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 50%;              /* centraliza verticalmente */
+  transform: translateY(-50%); /* corrige para ficar no meio exato */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+}
+
+/* Segundo slide */
+
+.trabalhar .swiper {
+  padding: 3rem;
+  height: auto;
+  overflow-y: visible; 
+}
+
+.trabalhar .swiper-wrapper {
+  overflow: visible; 
+}
+
+.trabalhar .section-title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #0c1f3b;
+  font-weight: bold;
+}
+
+.trabalhar .section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.trabalhar .swiper {
+  padding-bottom: 60px;
+}
+
+.trabalhar .swiper-slide {
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.trabalhar .swiper-slide img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  background: #eaeaea;
+}
+
+.trabalhar .swiper-slide h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.trabalhar .swiper-slide p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Slide central destacado */
+.trabalhar .swiper-slide-active {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.1);
+}
+
+.trabalhar .swiper-slide-active h5,
+.trabalhar .swiper-slide-active p {
+  color: #0c1f3b;
+}
+
+/* Slides laterais */
+.trabalhar .swiper-slide-prev,
+.trabalhar .swiper-slide-next {
+  background: #0c3b66;
+  color: #fff;
+  opacity: 1;
+}
+
+.trabalhar .swiper-slide-prev h5,
+.trabalhar .swiper-slide-next h5,
+.trabalhar .swiper-slide-prev p,
+.trabalhar .swiper-slide-next p {
+  color: #fff;
+}
+
+.trabalhar .swiper-button-next::after,
+.trabalhar .swiper-button-prev::after {
+  font-size: 16px;
+}
+
+/* Botão CTA */
+.trabalhar .cta-button {
+  display: block;
+  margin: 0 auto;
+  background: #0c3b66;
+  color: #fff;
+  border: none;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.trabalhar .cta-button:hover {
+  background: #092d4f;
 }

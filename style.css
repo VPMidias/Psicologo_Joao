@@ -1,4 +1,15 @@
-@import url("variables.css");
+:root {
+  --primary-color: #084e7f;
+  --secondary-color: #001938;
+
+  --text-color: #000d1e;
+  --white-color: #f9fafb;
+
+  --bg-color: #eeefea;
+
+  --font-main: "Roboto", sans-serif;
+  --font-size-base: 1rem;
+}
 
 * {
   font-size: var(--font-size-base);
@@ -53,7 +64,7 @@ body {
   background: transparent;
   transition: ease 0.5s;
 }
-.beneficio-item:hover{
+.beneficio-item:hover {
   transform: scale(1.2);
 }
 .beneficio-item .icon {
@@ -242,7 +253,7 @@ footer i {
 .swiper-pagination {
   display: flex;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   margin-top: 20px;
   text-align: center;
 }
@@ -262,7 +273,7 @@ footer i {
 
 /* Segundo slide */
 
-.trabalhar h3{
+.trabalhar h3 {
   font-size: 18px;
 }
 

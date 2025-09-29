@@ -51,8 +51,11 @@ body {
 
 .beneficio-item {
   background: transparent;
+  transition: ease 0.5s;
 }
-
+.beneficio-item:hover{
+  transform: scale(1.2);
+}
 .beneficio-item .icon {
   width: 80px;
   height: 80px;
@@ -237,6 +240,9 @@ footer i {
 }
 
 .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
   margin-top: 20px;
   text-align: center;
 }
@@ -244,6 +250,9 @@ footer i {
 .swiper-pagination-bullet {
   background-color: #0c1f3b;
   opacity: 0.4;
+  margin: 10rem;
+  height: 12px;
+  width: 12px;
 }
 
 .swiper-pagination-bullet-active {
@@ -251,27 +260,11 @@ footer i {
   opacity: 1;
 }
 
-/* Botões de navegação */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  top: 50%; /* centraliza verticalmente */
-  transform: translateY(-50%); /* corrige para ficar no meio exato */
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 16px;
-}
-
 /* Segundo slide */
+
+.trabalhar h3{
+  font-size: 18px;
+}
 
 .trabalhar .swiper {
   padding: 3rem;

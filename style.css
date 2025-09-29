@@ -132,9 +132,6 @@ body {
   max-width: 250px;
   margin: 0 auto;
 }
-.trabalhar {
-  height: 700px;
-}
 
 .btn-primary {
   background: var(--primary-color);
@@ -145,6 +142,15 @@ body {
 
 .btn-primary:hover {
   background: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.btn {
+  font-weight: 500;
+  border: none;
+  transition: 0.5s ease;
+}
+.btn:hover {
   transform: scale(1.05);
 }
 
@@ -192,49 +198,8 @@ footer i {
   margin-left: 1rem;
 }
 
-@media (max-width: 991px) {
-  .banner {
-    height: 105vh;
-  }
-  .navbar-custom {
-    background-color: rgba(255, 255, 255, 0.95) !important;
-  }
-
-  .beneficios {
-    height: 700px;
-    top: -80px;
-    background-image: url("./assets/fundo-beneficios-tab.png");
-  }
-  .funcionamento {
-    height: 900px;
-  }
-}
-@media (max-width: 769px) {
-  .funcionamento {
-    height: 1000px;
-  }
-}
-@media (max-width: 575px) {
-  .banner {
-    height: auto;
-  }
-  .navbar-custom {
-    background-color: rgba(255, 255, 255, 0.95) !important;
-  }
-
-  .beneficios {
-    background-image: url("./assets/fundo-beneficios-fone.png");
-    height: 1050px;
-  }
-
-  .bg-img {
-    width: 100%;
-  }
-}
-
 .swiper {
-  height: 270px;
-  padding: 0 2rem;
+  height: 300px;
 }
 
 .swiper-slide {
@@ -244,6 +209,11 @@ footer i {
   background-color: #fff;
   text-align: left;
   height: fit-content;
+  cursor: pointer;
+}
+
+.swiper-slide:hover {
+  filter: brightness(0.9);
 }
 
 .person-info {
@@ -282,8 +252,8 @@ footer i {
 }
 
 /* Botões de navegação */
- .swiper-button-next,
- .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   color: #fff;
   width: 40px;
   height: 40px;
@@ -292,7 +262,7 @@ footer i {
   justify-content: center;
   align-items: center;
 
-  top: 50%;              /* centraliza verticalmente */
+  top: 50%; /* centraliza verticalmente */
   transform: translateY(-50%); /* corrige para ficar no meio exato */
 }
 
@@ -306,11 +276,11 @@ footer i {
 .trabalhar .swiper {
   padding: 3rem;
   height: auto;
-  overflow-y: visible; 
+  overflow-y: visible;
 }
 
 .trabalhar .swiper-wrapper {
-  overflow: visible; 
+  overflow: visible;
 }
 
 .trabalhar .section-title {
@@ -322,7 +292,6 @@ footer i {
 
 .trabalhar .section-subtitle {
   text-align: center;
-  margin-bottom: 40px;
   color: #333;
 }
 
@@ -334,7 +303,7 @@ footer i {
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
-  transition: all 0.4s ease;
+  transition: all 0.6s ease;
   min-height: 320px;
   display: flex;
   flex-direction: column;
@@ -396,6 +365,7 @@ footer i {
 
 /* Botão CTA */
 .trabalhar .cta-button {
+  width: 40%;
   display: block;
   margin: 0 auto;
   background: #0c3b66;
@@ -403,7 +373,6 @@ footer i {
   border: none;
   padding: 12px 40px;
   font-size: 16px;
-  font-weight: bold;
   border-radius: 8px;
   text-align: center;
   margin-top: 10px;
@@ -412,4 +381,130 @@ footer i {
 
 .trabalhar .cta-button:hover {
   background: #092d4f;
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--secondary-color);
+  color: var(--white-color); /* ou a cor que você quer manter */
+  box-shadow: none; /* remove o shadow que o Bootstrap coloca */
+}
+
+/* Opcional: garante que o hover também não altere */
+.accordion-button:hover {
+  background: var(--secondary-color);
+}
+
+.accordion-button:focus,
+.accordion-button:active,
+.accordion-button:focus-visible {
+  outline: none; /* remove a borda de foco padrão */
+  box-shadow: none; /* remove a sombra que o Bootstrap adiciona */
+}
+
+.accordion-button::after {
+  color: white; /* Define a cor do ícone */
+  filter: invert(
+    1
+  ); /* Em alguns casos, o Bootstrap usa SVG que precisa inverter */
+}
+
+.hover-grow {
+  transition: transform 0.3s ease; /* suaviza a animação */
+}
+
+.hover-grow:hover {
+  transform: scale(1.1); /* aumenta 10% ao passar o mouse */
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-button i {
+  font-size: 35px;
+  color: var(--white-color);
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.2);
+}
+
+.w-40 {
+  width: 40%;
+}
+
+@media (max-width: 991px) {
+  .banner {
+    height: 105vh;
+  }
+  .navbar-custom {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .beneficios {
+    height: 700px;
+    top: -80px;
+    background-image: url("./assets/fundo-beneficios-tab.png");
+  }
+  .funcionamento {
+    height: 800px;
+  }
+}
+
+@media (max-width: 769px) {
+  .funcionamento {
+    background-image: url("./assets/fundo-funcionamento-fone.png");
+    height: 1000px;
+  }
+}
+@media (max-width: 575px) {
+  .trabalhar .cta-button {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .banner {
+    height: auto;
+  }
+  .navbar-custom {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .beneficios {
+    background-image: url("./assets/fundo-beneficios-fone.png");
+    height: 1050px;
+  }
+
+  .bg-img {
+    width: 100%;
+  }
+}
+/* Efeito de pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }

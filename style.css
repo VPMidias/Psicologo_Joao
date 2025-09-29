@@ -36,7 +36,7 @@ body {
 .banner {
   position: relative;
   height: 105vh;
-  background: url("./assets/image.png") no-repeat center center/cover;
+  background: url("./assets/image.webp") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +53,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  background-image: url("./assets/fundo-beneficios.png");
+  background-image: url("./assets/fundo-beneficios.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -116,7 +116,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  background-image: url("./assets/fundo-funcionamento.png");
+  background-image: url("./assets/fundo-funcionamento.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -461,7 +461,7 @@ footer i {
   .beneficios {
     height: 700px;
     top: -80px;
-    background-image: url("./assets/fundo-beneficios-tab.png");
+    background-image: url("./assets/fundo-beneficios-tab.webp");
   }
   .funcionamento {
     height: 800px;
@@ -470,7 +470,7 @@ footer i {
 
 @media (max-width: 769px) {
   .funcionamento {
-    background-image: url("./assets/fundo-funcionamento-fone.png");
+    background-image: url("./assets/fundo-funcionamento-fone.webp");
     height: 1000px;
   }
 }
@@ -483,7 +483,7 @@ footer i {
   }
   .banner {
     height: auto;
-    background: url('./assets/image-fone-min.png') no-repeat;
+    background: url('./assets/image-fone-min.webp') no-repeat;
     background-size: cover;
   }
   .navbar-custom {
@@ -491,7 +491,7 @@ footer i {
   }
 
   .beneficios {
-    background-image: url("./assets/fundo-beneficios-fone-min.png");
+    background-image: url("./assets/fundo-beneficios-fone-min.webp");
     height: 1050px;
   }
 

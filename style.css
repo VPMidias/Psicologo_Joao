@@ -483,7 +483,7 @@ footer i {
   }
   .banner {
     height: auto;
-    background: url('./assets/image-fone.png') no-repeat;
+    background: url('./assets/image-fone-min.png') no-repeat;
     background-size: cover;
   }
   .navbar-custom {
@@ -491,7 +491,7 @@ footer i {
   }
 
   .beneficios {
-    background-image: url("./assets/fundo-beneficios-fone.png");
+    background-image: url("./assets/fundo-beneficios-fone-min.png");
     height: 1050px;
   }
 

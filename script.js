@@ -40,8 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
           768: { slidesPerView: 2, centeredSlides: true },
           992: { slidesPerView: 3, centeredSlides: true },
         },
+        
       });
 
+      
 
   const navbar = document.querySelector(".navbar");
   const SCROLL_LIMIT = 50; // alterado de 200 para 50

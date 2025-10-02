@@ -32,27 +32,26 @@ body {
 .navbar-custom {
   transition: background-color 0.4s ease;
   background-color: transparent;
-  z-index: 1000; 
+  z-index: 1000;
 }
 .navbar-scrolled {
   background-color: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(6px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
 }
 
-.nav-link{
+.nav-link {
   color: var(--white-color);
 }
 
-.navbar-scrolled .nav-link{
+.navbar-scrolled .nav-link {
   color: var(--text-color);
 }
 
-.navbar-scrolled .navbar-brand, .navbar-scrolled .navbar-brand p{
-        color: var(--text-color) !important;
-      }
-
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .navbar-brand p {
+  color: var(--text-color) !important;
+}
 
 .beneficios {
   height: 375px;
@@ -109,7 +108,7 @@ body {
 }
 
 .funcionamento {
-  height: 700px;
+  height: 850px;
   position: relative;
   display: flex;
   align-items: center;
@@ -136,14 +135,7 @@ body {
   background-color: #d9d9d9;
   margin: 0 auto 20px;
 }
-.btn-custom {
-  margin-top: 30px;
-  background-color: #fff;
-  color: #1b1e3a;
-  border-radius: 25px;
-  padding: 10px 30px;
-  font-weight: bold;
-}
+
 .info-text {
   max-width: 250px;
   margin: 0 auto;
@@ -172,6 +164,32 @@ body {
 }
 .btn:hover {
   transform: scale(1.05);
+}
+
+.btn-shine {
+  position: relative;
+  display: inline-block;
+  background-color:var(--primary-color);
+  color: var(--white-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 1.7s infinite;
 }
 
 /* seçaão de duvidas */
@@ -223,10 +241,10 @@ footer i {
 }
 
 .swiper-slide {
-  border: 1.5px solid #004080;
+  border: 1.5px solid var(--primary-color);
   border-radius: 12px;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--white-color);
   text-align: left;
   height: fit-content;
   cursor: pointer;
@@ -244,14 +262,14 @@ footer i {
 
 .person-info img {
   border-radius: 50%;
-  border: 3px solid #003366;
+  border: 3px solid var(--primary-color);
   width: 60px;
   height: 60px;
   margin-right: 10px;
 }
 
 .person-name {
-  color: #004080;
+  color: var(--secondary-color);
   font-weight: 600;
   text-decoration: none;
 }
@@ -265,7 +283,7 @@ footer i {
 }
 
 .swiper-pagination-bullet {
-  background-color: #0c1f3b;
+  background-color: var(--text-color);
   opacity: 0.4;
   margin: 10rem;
   height: 12px;
@@ -273,7 +291,7 @@ footer i {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #0c1f3b;
+  background-color: var(--text-color);
   opacity: 1;
 }
 
@@ -296,7 +314,7 @@ footer i {
 .trabalhar .section-title {
   text-align: center;
   margin-bottom: 10px;
-  color: #0c1f3b;
+  color: var(--text-color);
   font-weight: bold;
 }
 
@@ -350,7 +368,7 @@ footer i {
 
 .trabalhar .swiper-slide-active h5,
 .trabalhar .swiper-slide-active p {
-  color: #0c1f3b;
+  color: var(--text-color);
 }
 
 /* Slides laterais */
@@ -510,5 +528,11 @@ footer i {
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
   }
 }

@@ -36,7 +36,8 @@
       .banner {
         position: relative;
         height: 100dvh;
-        background: url("./assets/images/banner01.webp") no-repeat center center/cover;
+        background: url("./assets/images/banner01.webp") no-repeat center
+          center/cover;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -89,40 +90,6 @@
       .banner p:nth-of-type(2) {
         width: 60%;
         font-size: 1.2rem;
-      }
-
-      .btn-shine {
-        position: relative;
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #0055aa;
-        color: white;
-        border-radius: 6px;
-        overflow: hidden;
-        font-weight: bold;
-      }
-
-      .btn-shine::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -75%;
-        width: 25%;
-        height: 100%;
-        background: linear-gradient(
-          120deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          rgba(255, 255, 255, 0.4) 50%,
-          rgba(255, 255, 255, 0.1) 100%
-        );
-        transform: skewX(-20deg);
-        animation: shine 1.7s infinite;
-      }
-
-      @keyframes shine {
-        100% {
-          left: 125%;
-        }
       }
 
       @media (max-width: 575px) {
@@ -286,7 +253,7 @@
             <article class="col-12 col-sm-6 col-lg-3">
               <div class="beneficio-item p-3">
                 <div class="mb-3">
-                <img
+                  <img
                     src="./assets/icons/tablet-e-laptop.webp"
                     alt="Ícone de alívio da ansiedade"
                     class="img-fluid"
@@ -338,8 +305,14 @@
               class="col-12 col-md-10 col-xl-6 mb-4 mb-lg-0 text-center bg-img"
             >
               <picture>
-                <source srcset="./assets/images/quemsou01.webp" type="image/webp" />
-                <source srcset="./assets/images/quemsou01.png" type="image/png" />
+                <source
+                  srcset="./assets/images/quemsou01.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./assets/images/quemsou01.png"
+                  type="image/png"
+                />
                 <img
                   src="./assets/images/quemsou01.png"
                   alt="Psicólogo João Victor"
@@ -453,13 +426,15 @@
           <!-- Título da seção -->
           <header class="mb-5">
             <h1 class="text-white">Como funciona o atendimento ?</h1>
-            <p class="fs-4">Entenda como funciona a sua jornada terapêutica</p>
+            <p class="fs-5">
+              Um caminho de escuta, acolhimento e reflexão, no seu tempo.
+            </p>
           </header>
 
           <!-- Etapas -->
           <div class="row d-flex flex-wrap justify-content-center g-4 mt-5">
             <div
-              class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center hover-grow"
+              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow"
             >
               <div class="my-3">
                 <img
@@ -471,13 +446,14 @@
                 />
               </div>
               <p class="mx-auto">
-                São encontros semanais, marcados com antecedência sempre no
-                mesmo dia e horário, que serão reservados só para você.
+                A conversa inicial acontece pelo WhatsApp, de forma simples e
+                direta, para entendermos sua necessidade e esclarecer suas
+                dúvidas.
               </p>
             </div>
 
             <div
-              class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center hover-grow"
+              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow"
             >
               <div class="my-3">
                 <img
@@ -489,14 +465,32 @@
                 />
               </div>
               <p class="mx-auto">
-                É um espaço sigiloso, seguro e livre de julgamentos para que
-                você possa falar livremente sobre o que vive, seus sentimentos e
-                pensamentos.
+                Nos encontros, você encontra um espaço sigiloso, seguro e sem
+                julgamentos, onde pode compartilhar suas vivências, sentimentos
+                e pensamentos com liberdade.
               </p>
             </div>
 
             <div
-              class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center hover-grow"
+              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow"
+            >
+              <div class="my-3">
+                <img
+                  src="./assets/icons/perspectiva.webp"
+                  alt="Ícone de autoconhecimento"
+                  class="img-fluid"
+                  width="64"
+                  height="64"
+                />
+              </div>
+              <p class="mx-auto">
+                O processo acontece no seu ritmo e pode favorecer novas
+                reflexões e percepções ao longo do tempo. Seguimos juntos
+                enquanto fizer sentido para você.
+              </p>
+            </div>
+            <div
+              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow"
             >
               <div class="my-3">
                 <img
@@ -514,22 +508,23 @@
               </p>
             </div>
           </div>
-
+          <p class="w-50 mx-auto my-5">
+            O processo acontece no seu ritmo e pode favorecer novas reflexões e
+            percepções ao longo do tempo. Seguimos juntos enquanto fizer
+            sentido para você.
+          </p>
           <!-- CTA -->
-          <div class="mt-5">
-            <a href="#" class="btn btn-light text-dark px-4 py-2">
-              Quero começar minha terapia
-            </a>
+          <div class="mt-2">
+            <a href="#" class="btn btn-light"> Agendar consulta online </a>
           </div>
         </div>
       </section>
 
       <section class="trabalhar">
         <div class="container py-5">
-          <h2 class="section-title">O que pode ser trabalhado?</h2>
-          <p class="section-subtitle">
-            Descubra os principais temas que podem ser abordados na terapia para
-            melhorar sua saúde emocional e qualidade de vida.
+          <h1 class="text-center">O que você pode trabalhar na terapia?</h1>
+          <p class="fs-5 w-75 mx-auto text-center">
+            Aqui você encontra um espaço seguro para falar sobre suas dores, compreender suas emoções e encontrar novos caminhos.
           </p>
 
           <div class="swiper swiper-terapia">
@@ -592,12 +587,14 @@
             </div>
           </div>
 
+          <p class="w-50 mx-auto text-center">Você não precisa enfrentar seus desafios sozinho(a). Permita-se encontrar apoio, acolhimento e um espaço para cuidar de si com leveza e confiança.</p>
+
           <!-- Botão CTA -->
           <a
             href="https://wa.me/5511988210994"
             target="_blank"
             class="btn cta-button mx-auto btn-shine"
-            >Quero começar</a
+            >Agendar consulta online</a
           >
         </div>
       </section>

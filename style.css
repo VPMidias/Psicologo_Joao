@@ -32,24 +32,38 @@ body {
 .navbar-custom {
   transition: background-color 0.4s ease;
   background-color: transparent;
-  z-index: 1000; /* garante que fica acima do banner */
+  z-index: 1000; 
 }
 .navbar-scrolled {
   background-color: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(6px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra leve */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
 }
+
+.nav-link{
+  color: var(--white-color);
+}
+
+.navbar-scrolled .nav-link{
+  color: var(--text-color);
+}
+
+.navbar-scrolled .navbar-brand, .navbar-scrolled .navbar-brand p{
+        color: var(--text-color) !important;
+      }
+
 
 .beneficios {
   height: 375px;
   position: relative;
   display: flex;
   align-items: center;
-  background-image: url("./assets/fundo-beneficios.webp");
+  background-image: url("./assets/images/fundo-beneficios.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  top: -40px;
+  top: -45px;
 }
 
 .beneficio-item {
@@ -58,16 +72,6 @@ body {
 }
 .beneficio-item:hover {
   transform: scale(1.2);
-}
-.beneficio-item .icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .beneficio-titulo,
@@ -109,7 +113,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  background-image: url("./assets/fundo-funcionamento.webp");
+  background-image: url("./assets/images/fundo-funcionamento.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -459,16 +463,16 @@ footer i {
   .beneficios {
     height: 700px;
     top: -80px;
-    background-image: url("./assets/fundo-beneficios-tab.webp");
+    background-image: url("./assets/images/fundo-beneficios-tab.webp");
   }
   .funcionamento {
-    height: 800px;
+    height: 1000px;
   }
 }
 
 @media (max-width: 769px) {
   .funcionamento {
-    background-image: url("./assets/fundo-funcionamento-fone.webp");
+    background-image: url("./assets/images/fundo-funcionamento-fone.webp");
     height: 1400px;
   }
 }
@@ -485,7 +489,7 @@ footer i {
   }
 
   .beneficios {
-    background-image: url("./assets/fundo-beneficios-fone-min.webp");
+    background-image: url("./assets/images/fundo-beneficios-fone-min.webp");
     height: 1050px;
   }
 

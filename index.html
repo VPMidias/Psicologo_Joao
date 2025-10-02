@@ -10,11 +10,10 @@
     <title>João Vitor Pavanelli</title>
 
     <style>
-
-      h1{
+      h1 {
         font-family: var(--font-destaque);
-        font-weight: 700  !important;
-        font-size: 3rem  !important;
+        font-weight: 700 !important;
+        font-size: 3rem !important;
       }
 
       .navbar-toggler {
@@ -37,7 +36,7 @@
       .banner {
         position: relative;
         height: 100dvh;
-        background: url("./assets/bannar03.png") no-repeat center center/cover;
+        background: url("./assets/images/banner01.webp") no-repeat center center/cover;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -46,31 +45,116 @@
         font-weight: 500;
       }
 
-      .banner h1, .banner h2{
+      .navbar-brand,
+      .navbar-brand p {
+        color: var(--white-color) !important;
+      }
+
+      .navbar-brand {
+        position: relative;
+        font-family: var(--font-destaque);
+      }
+
+      .navbar-brand p {
+        position: absolute;
+        text-align: center;
+        font-size: 0.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 62%;
+      }
+
+      .banner h1,
+      .banner h2 {
         font-family: var(--font-destaque);
         font-size: 3.5rem !important;
-        font-weight: 700  !important;
-        line-height: 3rem;
+        font-weight: 700 !important;
+        line-height: 3.2rem;
+        color: var(--white-color);
       }
 
-      .banner p{
+      .banner p {
         width: 75%;
         font-size: 24px;
+        color: var(--white-color);
       }
 
-       .banner p:nth-of-type(1) {
+      .banner p:nth-of-type(1) {
         font-family: var(--font-destaque);
         font-size: 2.5rem;
         line-height: 2.2rem;
         font-weight: 600;
       }
 
-
       .banner p:nth-of-type(2) {
         width: 60%;
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
 
+      .btn-shine {
+        position: relative;
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #0055aa;
+        color: white;
+        border-radius: 6px;
+        overflow: hidden;
+        font-weight: bold;
+      }
+
+      .btn-shine::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 25%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.4) 50%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+        transform: skewX(-20deg);
+        animation: shine 1.7s infinite;
+      }
+
+      @keyframes shine {
+        100% {
+          left: 125%;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .banner {
+          background: url("./assets/images/banner-fone.webp") no-repeat center
+            center/cover;
+          text-align: center;
+        }
+
+        .banner h1,
+        .banner h2 {
+          font-size: 35px !important;
+          font-weight: 700 !important;
+          line-height: 2.5rem;
+        }
+
+        .banner p {
+          width: 100%;
+        }
+
+        .banner p:nth-of-type(1) {
+          font-family: var(--font-destaque);
+          font-size: 22px;
+          line-height: 2rem;
+          font-weight: 600;
+        }
+
+        .banner p:nth-of-type(2) {
+          width: 100%;
+          font-size: 1rem;
+        }
+      }
     </style>
 
     <link
@@ -93,7 +177,10 @@
         class="navbar navbar-expand-lg fixed-top navbar-light navbar-custom py-3"
       >
         <div class="container">
-          <a class="navbar-brand fw-bold" href="#">Logo</a>
+          <a class="navbar-brand fw-bold fs-3" href="#">
+            João Vitor Pavanelli
+            <p>Psicanalista</p>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -101,9 +188,9 @@
             data-bs-target="#navbarNav"
             aria-label="Abrir Menu"
           >
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse " id="navbarNav">
+          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto gap-3">
               <li class="nav-item">
                 <a class="nav-link" href="#sobre">Sobre mim</a>
@@ -116,8 +203,8 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="btn btn-primary"
-                  href="https://wa.me/5511999999999"
+                  class="btn btn-primary btn-shine"
+                  href="https://wa.me/5511988210994"
                   target="_blank"
                   >Fale Comigo</a
                 >
@@ -132,18 +219,20 @@
       <section class="banner py-lg-5">
         <div class="container py-5">
           <div class="col-12 col-lg-7 py-lg-5">
-            <h1 >João Vitor Pavanelli</h1>
-            <h2 class="mb-4">Psicólogo Especialista em Psicanálise</h2>
+            <h1 class="mb-4">Psicólogo especialista em psicanálise</h1>
             <p>
-              Você não precisa enfrentar suas angústias sozinho. Aqui, sua voz é ouvida com acolhimento e sigilo.
+              Você não precisa enfrentar suas angústias sozinho. Aqui, sua voz é
+              ouvida com acolhimento e sigilo.
             </p>
             <p>
-             Atendimento online em Psicanálise: um espaço seguro para compreender emoções, fortalecer sua autoestima e alcançar autoconhecimento.
+              Atendimento online em Psicanálise: um espaço seguro para
+              compreender emoções, fortalecer sua autoestima e alcançar
+              autoconhecimento.
             </p>
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5511988210994"
               target="_blank"
-              class="btn btn-primary mt-3 mx-auto btn-anim-border"
+              class="btn btn-primary mt-3 mx-auto btn-shine"
               >Agendar consulta online</a
             >
           </div>
@@ -154,84 +243,83 @@
           <div class="row text-center align-content-center">
             <article class="col-12 col-sm-6 col-lg-3">
               <div class="beneficio-item p-3">
-                <div class="icon mb-3">
+                <div class="mb-3">
                   <img
-                    src="#"
+                    src="./assets/icons/duvidoso.webp"
                     alt="Ícone de autoconhecimento"
                     class="img-fluid"
-                    width="80"
-                    height="80"
+                    width="60"
+                    height="60"
                   />
                 </div>
                 <h3 class="h6 fw-bold beneficio-titulo">
                   Autoconhecimento profundo
                 </h3>
                 <p class="mb-0 beneficio-texto">
-                  Descubra padrões inconscientes que influenciam escolhas e
-                  comportamentos.
+                  Descubra padrões inconscientes que podem influenciar certas
+                  escolhas e comportamentos
                 </p>
               </div>
             </article>
 
             <article class="col-12 col-sm-6 col-lg-3">
               <div class="beneficio-item p-3">
-                <div class="icon mb-3">
+                <div class="mb-3">
                   <img
-                    src="#"
+                    src="./assets/icons/respiracao.webp"
                     alt="Ícone de alívio da ansiedade"
                     class="img-fluid"
-                    width="80"
-                    height="80"
+                    width="60"
+                    height="60"
                   />
                 </div>
                 <h3 class="h6 fw-bold beneficio-titulo">
                   Alívio de ansiedade e angústia
                 </h3>
                 <p class="mb-0 beneficio-texto">
-                  Um espaço seguro para elaborar emoções e fortalecer sua saúde
-                  mental.
+                  Um espaço seguro para falar livremente sobre suas emoções e
+                  pensamentos
                 </p>
               </div>
             </article>
 
             <article class="col-12 col-sm-6 col-lg-3">
               <div class="beneficio-item p-3">
-                <div class="icon mb-3">
-                  <img
-                    src="#"
-                    alt="Ícone de praticidade"
+                <div class="mb-3">
+                <img
+                    src="./assets/icons/tablet-e-laptop.webp"
+                    alt="Ícone de alívio da ansiedade"
                     class="img-fluid"
-                    width="80"
-                    height="80"
+                    width="60"
+                    height="60"
                   />
                 </div>
                 <h3 class="h6 fw-bold beneficio-titulo">
                   Praticidade e acessibilidade
                 </h3>
                 <p class="mb-0 beneficio-texto">
-                  Atendimento online com sigilo, sem deslocamentos ou barreiras
-                  geográficas.
+                  Atendimento online ético e sigiloso, sem a necessidade de
+                  deslocamento e sem barreiras geográficas.
                 </p>
               </div>
             </article>
 
             <article class="col-12 col-sm-6 col-lg-3">
               <div class="beneficio-item p-3">
-                <div class="icon mb-3">
+                <div class="mb-3">
                   <img
-                    src="#"
+                    src="./assets/icons/autoestima.webp"
                     alt="Ícone de autoestima"
                     class="img-fluid"
-                    width="80"
-                    height="80"
+                    width="60"
+                    height="60"
                   />
                 </div>
                 <h3 class="h6 fw-bold beneficio-titulo">
                   Mais autonomia e autoestima
                 </h3>
                 <p class="mb-0 beneficio-texto">
-                  Conquiste clareza, confiança e maturidade para enfrentar os
-                  desafios da vida.
+                  Tenha maior clareza nos pensamentos, emoções e sentimentos.
                 </p>
               </div>
             </article>
@@ -250,16 +338,10 @@
               class="col-12 col-md-10 col-xl-6 mb-4 mb-lg-0 text-center bg-img"
             >
               <picture>
-                <source
-                  srcset="./assets/quemsou01.webp"
-                  type="image/webp"
-                />
-                <source
-                  srcset="./assets/quemsou01.png"
-                  type="image/png"
-                />
+                <source srcset="./assets/images/quemsou01.webp" type="image/webp" />
+                <source srcset="./assets/images/quemsou01.png" type="image/png" />
                 <img
-                  src="./assets/quemsou01.png"
+                  src="./assets/images/quemsou01.png"
                   alt="Psicólogo João Victor"
                   class="img-fluid"
                   width="430"
@@ -271,22 +353,37 @@
             <div
               class="col-12 col-md-10 col-xl-6 text-center text-xl-start p-0"
             >
-              <h1 class="h1">Psicólogo João Victor</h1>
-              <p class="fs-5">
-                Tenho experiência em atendimentos individuais, de casal e
-                online, ajudando pessoas a enfrentarem questões como ansiedade,
-                estresse, autoestima e relacionamentos.
+              <h1>Psicólogo João Vitor Pavanelli</h1>
+              <p>
+                Sou psicólogo clínico <strong> (CRP 06/152311)</strong> formado
+                pela Universidade Estadual Paulista - UNESP e
+                <strong
+                  >Especialista em Psicoterapia de orientação
+                  psicanalítica</strong
+                >
+                pela Universidade Mackenzie. Atendi durante alguns anos tanto
+                presencialmente como online diversas faixas etárias, hoje
+                concentro meu trabalho no atendimento online de adolescentes,
+                adultos e idosos, utilizando a psicanálise como abordagem.
               </p>
-              <p class="fs-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, quando um unknown printer took a
-                galley.
+              <p>
+                A psicanálise é um método de tratamento que propõe a
+                investigação do inconsciente, em busca de sentidos ocultos para
+                sintomas e conflitos. Podendo atuar de forma terapêutica em
+                diversos temas, como ansiedade, depressão, traumas, luto,
+                relacionamentos conflituosos como também tem seus efeitos
+                atuando de forma preventiva e de autocuidado.
+              </p>
+              <p>
+                Em meu percurso na psicanálise estou em formação continua, em
+                concordância com o tripé Psicanalítico, mantenho supervisões,
+                análise pessoal, e estudo teórico continuo em grupos de estudo e
+                eventos da área.
               </p>
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5511988210994"
                 target="_blank"
-                class="btn btn-primary mt-3"
+                class="btn btn-primary mt-3 btn-shine"
                 >Agendar consulta online</a
               >
             </div>
@@ -355,66 +452,68 @@
         <div class="container text-center">
           <!-- Título da seção -->
           <header class="mb-5">
-            <h1>Como funciona o atendimento</h1>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, maxime voluptate! Corrupti</h>
+            <h1 class="text-white">Como funciona o atendimento ?</h1>
+            <p class="fs-4">Entenda como funciona a sua jornada terapêutica</p>
           </header>
 
           <!-- Etapas -->
           <div class="row d-flex flex-wrap justify-content-center g-4 mt-5">
             <div
-              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow "
+              class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center hover-grow"
             >
-              <div
-                class="rounded-circle bg-light mb-3"
-                style="width: 100px; height: 100px"
-              ></div>
+              <div class="my-3">
+                <img
+                  src="./assets/icons/encontro.webp"
+                  alt="Ícone de autoconhecimento"
+                  class="img-fluid"
+                  width="64"
+                  height="64"
+                />
+              </div>
               <p class="mx-auto">
-                Lorem Ipsum é simplesmente um texto fictício da indústria
-                tipográfica.
-              </p>
-            </div>
-
-             <div
-              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow "
-            >
-              <div
-                class="rounded-circle bg-light mb-3"
-                style="width: 100px; height: 100px"
-              ></div>
-              <p class="mx-auto">
-                Lorem Ipsum é simplesmente um texto fictício da indústria
-                tipográfica.
+                São encontros semanais, marcados com antecedência sempre no
+                mesmo dia e horário, que serão reservados só para você.
               </p>
             </div>
 
             <div
-              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow "
+              class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center hover-grow"
             >
-              <div
-                class="rounded-circle bg-light mb-3"
-                style="width: 100px; height: 100px"
-              ></div>
-              <p class=" mx-auto">
-                Lorem Ipsum é simplesmente um texto fictício da indústria
-                tipográfica.
+              <div class="my-3">
+                <img
+                  src="./assets/icons/assistencia-social.webp"
+                  alt="Ícone de autoconhecimento"
+                  class="img-fluid"
+                  width="64"
+                  height="64"
+                />
+              </div>
+              <p class="mx-auto">
+                É um espaço sigiloso, seguro e livre de julgamentos para que
+                você possa falar livremente sobre o que vive, seus sentimentos e
+                pensamentos.
               </p>
             </div>
 
             <div
-              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow "
+              class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center hover-grow"
             >
-              <div
-                class="rounded-circle bg-light mb-3"
-                style="width: 100px; height: 100px"
-              ></div>
+              <div class="my-3">
+                <img
+                  src="./assets/icons/perspectiva.webp"
+                  alt="Ícone de autoconhecimento"
+                  class="img-fluid"
+                  width="64"
+                  height="64"
+                />
+              </div>
               <p class="mx-auto">
-                Lorem Ipsum é simplesmente um texto fictício da indústria
-                tipográfica.
+                Com o passar das sessões, vamos reconstruindo e entendendo
+                juntos a sua história e sua maneira de lidar com o mundo,
+                podendo assim abrir caminho para que algo novo possa surgir.
               </p>
             </div>
           </div>
-
-          
 
           <!-- CTA -->
           <div class="mt-5">
@@ -438,28 +537,27 @@
               <!-- Slide 1 -->
               <div class="swiper-slide">
                 <img src="#" alt="icone" />
-                <h3>Relacionamentos e Comunicação</h3>
+                <h3>Relacionamentos</h3>
                 <p>
-                  Melhore sua forma de se relacionar com familiares, parceiros e
-                  colegas.
+                  Demandas que surgem na relação com o outro podem levar a
+                  conflitos e dificuldades de comunicação.
                 </p>
               </div>
 
               <!-- Slide 2 -->
               <div class="swiper-slide">
                 <img src="#" alt="icone" />
-                <h3>Ansiedade e Estresse</h3>
+                <h3>Ansiedade</h3>
                 <p>
-                  Aprenda a identificar gatilhos, reduzir sintomas e desenvolver
-                  estratégias para manter o equilíbrio emocional em situações de
-                  pressão.
+                  Apatia e desanimo profundo que geram sentimentos de culpa e
+                  isolamento.
                 </p>
               </div>
 
               <!-- Slide 3 -->
               <div class="swiper-slide">
                 <img src="#" alt="icone" />
-                <h3>Depressão e Desmotivação</h3>
+                <h3>Depressão</h3>
                 <p>
                   Encontre apoio para compreender seus sentimentos,
                   ressignificar experiências e recuperar a energia para a vida
@@ -470,21 +568,25 @@
               <!-- Slide 4 -->
               <div class="swiper-slide">
                 <img src="#" alt="icone" />
-                <h3>4</h3>
-                <p>
-                  Encontre apoio para compreender seus sentimentos,
-                  ressignificar experiências e recuperar a energia para a vida
-                  cotidiana.
-                </p>
+                <h3>Baixa autoestima</h3>
+                <p>Percepções negativas de si mesmo que causam insegurança.</p>
               </div>
               <!-- Slide 3 -->
               <div class="swiper-slide">
                 <img src="#" alt="icone" />
-                <h3>3</h3>
+                <h3>Momentos desafiadores</h3>
                 <p>
-                  Encontre apoio para compreender seus sentimentos,
-                  ressignificar experiências e recuperar a energia para a vida
-                  cotidiana.
+                  Momentos confrontantes na vida, como enfrentamento de medos e
+                  mudanças significativas.
+                </p>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="#" alt="icone" />
+                <h3>O que você desejar</h3>
+                <p>
+                  Qualquer tema que você sentir necessidade de falar, em um
+                  ambiente sigiloso e livre de julgamentos.
                 </p>
               </div>
             </div>
@@ -492,31 +594,27 @@
 
           <!-- Botão CTA -->
           <a
-            href="https://wa.me/5511999999999"
+            href="https://wa.me/5511988210994"
             target="_blank"
-            class="btn cta-button mx-auto"
+            class="btn cta-button mx-auto btn-shine"
             >Quero começar</a
           >
         </div>
       </section>
 
-      <section class="duvidas position-relative">
+      <section class="duvidas position-relative" id="duvidas">
         <div class="container">
           <div class="row">
-            <div class="col-12 col-lg-6 ">
-               <picture>
-                <source
-                  srcset="./assets/Fac01.png"
-                  type="image/png"
-                />
+            <div class="col-12 col-lg-6">
+              <picture>
+                <source srcset="./assets/images/Fac01.png" type="image/png" />
                 <img
-                  src="./assets/Fac01.png"
+                  src="./assets/images/Fac01.png"
                   alt="Psicólogo João Victor"
                   class="img-fluid"
                   width="430"
                 />
               </picture>
-
             </div>
             <div class="col-12 col-lg-6">
               <h1>Dúvidas Frequentes</h1>
@@ -542,7 +640,7 @@
                     data-bs-parent="#faqAccordion"
                   >
                     <div class="accordion-body">
-                      Cada sessão geralmente dura entre 45 e 60 minutos.
+                      Cada sessão geralmente dura entre 50 e 60 minutos.
                     </div>
                   </div>
                 </div>
@@ -557,7 +655,7 @@
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                      Com que frequência devo participar das sessões?
+                      Qual o valor de cada sessão?
                     </button>
                   </h2>
                   <div
@@ -567,8 +665,8 @@
                     data-bs-parent="#faqAccordion"
                   >
                     <div class="accordion-body">
-                      Normalmente, recomenda-se uma sessão por semana, mas isso
-                      depende do seu caso.
+                      Conversamos e acordamos sobre valores no primeiro contato,
+                      onde combinaremos também a forma de pagamento.
                     </div>
                   </div>
                 </div>
@@ -583,7 +681,7 @@
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      Como sei se a terapia está funcionando para mim?
+                      Com que frequência devo participar das sessões?
                     </button>
                   </h2>
                   <div
@@ -593,8 +691,8 @@
                     data-bs-parent="#faqAccordion"
                   >
                     <div class="accordion-body">
-                      Você vai perceber mudanças no seu bem-estar, na forma de
-                      lidar com problemas e nas emoções ao longo do tempo.
+                      Normalmente uma vez por semana, mas podemos avaliar juntos
+                      sua necessidade.
                     </div>
                   </div>
                 </div>
@@ -609,7 +707,7 @@
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                      Como posso começar e agendar minha primeira consulta?
+                      Você atende convênio médico?
                     </button>
                   </h2>
                   <div
@@ -618,10 +716,7 @@
                     aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion"
                   >
-                    <div class="accordion-body">
-                      Você pode entrar em contato pelo nosso site ou telefone
-                      para agendar a primeira sessão.
-                    </div>
+                    <div class="accordion-body">Não atendo convênios.</div>
                   </div>
                 </div>
 
@@ -635,8 +730,7 @@
                       aria-expanded="false"
                       aria-controls="collapseFive"
                     >
-                      É possível fazer terapia online e ter a mesma eficácia que
-                      presencial?
+                      Como posso começar e agendar minha primeira sessão?
                     </button>
                   </h2>
                   <div
@@ -646,17 +740,17 @@
                     data-bs-parent="#faqAccordion"
                   >
                     <div class="accordion-body">
-                      Sim! Estudos mostram que a terapia online pode ser tão
-                      eficaz quanto a presencial.
+                      Você pode entrar em contato agora mesmo pelo Whats app
+                      para agendar a primeira sessão.
                     </div>
                   </div>
                 </div>
               </div>
 
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5511988210994"
                 target="_blank"
-                class="btn btn-primary mt-3 mx-auto"
+                class="btn btn-primary mt-3 mx-auto btn-shine"
                 >Agendar consulta online</a
               >
             </div>
@@ -664,7 +758,7 @@
         </div>
       </section>
       <a
-        href="https://wa.me/5511999999999"
+        href="https://wa.me/5511988210994"
         target="_blank"
         class="whatsapp-button"
         aria-label="Botao WhatsApp"
@@ -678,7 +772,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-6 text-center text-lg-start">
-              <h2>Logo</h2>
+              <h2>Joao Vitor Pavanelli</h2>
               <p class="w-100 w-xl-50 mx-auto mx-xl-0">
                 Lorem Ipsum é simplesmente uma simulação de texto da indústria
                 tipográfica.

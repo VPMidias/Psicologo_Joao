@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+
 :root {
   --primary-color: #084e7f;
   --secondary-color: #001938;
@@ -7,17 +11,21 @@
 
   --bg-color: #eeefea;
 
-  --font-main: "Roboto", sans-serif;
+  --font-destaque: "Abhaya Libre", sans-serif;
+  --font-base: "Inter", sans-serif;
+  --font-button: "Unbounded", sans-serif;
+
   --font-size-base: 1rem;
 }
 
 * {
-  font-size: var(--font-size-base);
   color: var(--text-color);
   box-sizing: border-box;
 }
 
 body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
   background: var(--bg-color);
 }
 
@@ -31,7 +39,6 @@ body {
   backdrop-filter: blur(6px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra leve */
 }
-
 
 .beneficios {
   height: 375px;
@@ -92,8 +99,9 @@ body {
 }
 .bg-img img {
   position: absolute;
-  right: 0;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .funcionamento {
@@ -108,8 +116,13 @@ body {
 }
 
 .funcionamento p,
-.funcionamento h2 {
+.funcionamento h2,
+.funcionamento h3 {
   color: var(--white-color);
+}
+
+.funcionamento h3 {
+  font-size: 20px;
 }
 
 .circle {
@@ -145,9 +158,13 @@ body {
 }
 
 .btn {
-  font-weight: 500;
+  font-size: 14px;
+  font-family: var(--font-button);
+  font-weight: 400;
+  text-transform: uppercase;
   border: none;
   transition: 0.5s ease;
+  padding: 0.9rem 4rem;
 }
 .btn:hover {
   transform: scale(1.05);
@@ -431,7 +448,6 @@ footer i {
   transform: scale(1.2);
 }
 
-
 @media (max-width: 991px) {
   .banner {
     height: 105vh;
@@ -453,7 +469,7 @@ footer i {
 @media (max-width: 769px) {
   .funcionamento {
     background-image: url("./assets/fundo-funcionamento-fone.webp");
-    height: 1000px;
+    height: 1400px;
   }
 }
 @media (max-width: 575px) {
@@ -492,4 +508,3 @@ footer i {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
-

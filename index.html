@@ -9,121 +9,59 @@
     />
     <title>João Vitor Pavanelli</title>
 
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/foto-banner01.webp"
+      type="image/webp"
+      imagesrcset="
+        ./assets/images/foto-banner01.webp 480w,
+        ./assets/images/foto-banner01.webp 768w,
+        ./assets/images/foto-banner01.webp 1200w
+      "
+      imagesizes="(max-width: 576px) 90vw,
+                  (max-width: 1200px) 50vw,
+                  600px"
+    />
+
     <style>
-      h1 {
-        font-family: var(--font-destaque);
-        font-weight: 700 !important;
-        font-size: 3rem !important;
-      }
-
-      .navbar-toggler {
-        border: none !important; /* remove borda */
-        box-shadow: none !important; /* remove sombra ao abrir */
-        outline: none !important; /* remove contorno */
-      }
-
-      .navbar-toggler:focus,
-      .navbar-toggler:active {
-        box-shadow: none !important;
-        outline: none !important;
-        background: transparent !important;
-      }
-
-      .navbar-toggler-icon {
-        font-size: 25px;
-      }
-
       .banner {
-        position: relative;
-        height: 100dvh;
-        background: url("./assets/images/banner01.webp") no-repeat center
+        min-height: 100vh;
+        background: url("./assets/images/Bannar01.webp") no-repeat center
           center/cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-        padding: 4rem 0;
-        font-weight: 500;
-      }
-
-      .navbar-brand,
-      .navbar-brand p {
-        color: var(--white-color) !important;
-      }
-
-      .navbar-brand {
         position: relative;
-        font-family: var(--font-destaque);
+        overflow: hidden;
+      }
+      .img-banner {
+        position: absolute;
+        bottom: 0;
+        right: 8%;
+        max-height: 90vh;
+        width: auto;
       }
 
-      .navbar-brand p {
-        position: absolute;
-        text-align: center;
-        font-size: 0.9rem;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 62%;
+      @media (max-width: 1024px) {
+        .banner {
+          padding: 3rem 0;
+          height: auto;
+        }
+
+        .img-banner {
+          position: relative;
+          display: block;
+          bottom: 0;
+          margin: 2rem auto 0 auto;
+          width: 80%;
+          right: unset;
+        }
       }
 
       .banner h1,
-      .banner h2 {
-        font-family: var(--font-destaque);
-        font-size: 3.5rem !important;
-        font-weight: 700 !important;
-        line-height: 3.2rem;
-        color: var(--white-color);
-      }
-
       .banner p {
-        width: 75%;
-        font-size: 24px;
-        color: var(--white-color);
-      }
-
-      .banner p:nth-of-type(1) {
-        font-family: var(--font-destaque);
-        font-size: 2.5rem;
-        line-height: 2.2rem;
-        font-weight: 600;
-      }
-
-      .banner p:nth-of-type(2) {
-        width: 60%;
-        font-size: 1.2rem;
-      }
-
-      @media (max-width: 575px) {
-        .banner {
-          background: url("./assets/images/banner-fone.webp") no-repeat center
-            center/cover;
-          text-align: center;
-        }
-
-        .banner h1,
-        .banner h2 {
-          font-size: 35px !important;
-          font-weight: 700 !important;
-          line-height: 2.5rem;
-        }
-
-        .banner p {
-          width: 100%;
-        }
-
-        .banner p:nth-of-type(1) {
-          font-family: var(--font-destaque);
-          font-size: 22px;
-          line-height: 2rem;
-          font-weight: 600;
-        }
-
-        .banner p:nth-of-type(2) {
-          width: 100%;
-          font-size: 1rem;
-        }
+        color: #fff;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
       }
     </style>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -133,10 +71,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
   </head>
   <body>
     <header>
@@ -183,25 +117,44 @@
     </header>
     <div class="overlay"></div>
     <main>
-      <section class="banner py-lg-5">
+      <section class="banner d-flex align-items-center">
         <div class="container py-5">
-          <div class="col-12 col-lg-7 py-lg-5">
-            <h1 class="mb-4">Psicólogo especialista em psicanálise</h1>
-            <p>
-              Você não precisa enfrentar suas angústias sozinho. Aqui, sua voz é
-              ouvida com acolhimento e sigilo.
-            </p>
-            <p>
-              Atendimento online em Psicanálise: um espaço seguro para
-              compreender emoções, fortalecer sua autoestima e alcançar
-              autoconhecimento.
-            </p>
-            <a
-              href="https://wa.me/5511988210994"
-              target="_blank"
-              class="btn btn-primary mt-3 mx-auto btn-shine"
-              >Agendar consulta online</a
-            >
+          <div class="row flex-column-reverse">
+            <!-- Texto -->
+            <div class="col-12 col-xl-6 text-white text-center text-xl-start">
+              <h1 class="fw-bold mb-4">
+                Psicólogo especialista em psicanálise
+              </h1>
+              <p class="lead mb-3">
+                Você não precisa enfrentar suas angústias sozinho. Aqui, sua voz
+                é ouvida com acolhimento e sigilo.
+              </p>
+              <p>
+                Atendimento online em Psicanálise: um espaço seguro para
+                compreender emoções, fortalecer sua autoestima e alcançar
+                autoconhecimento.
+              </p>
+              <a href="#contato" class="btn btn-primary btn-lg mt-3"
+                >Agendar consulta online</a
+              >
+            </div>
+            <div class="col-12 col-xl-6 text-center">
+              <img
+                src="./assets/images/foto-banner01.webp"
+                srcset="
+                  ./assets/images/foto-banner01.webp  480w,
+                  ./assets/images/foto-banner01.webp  768w,
+                  ./assets/images/foto-banner01.webp 1200w
+                "
+                sizes="(max-width: 576px) 90vw,
+         (max-width: 1200px) 50vw,
+         600px"
+                alt="Psicólogo especialista"
+                class="img-banner"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -217,6 +170,7 @@
                     class="img-fluid"
                     width="60"
                     height="60"
+                    loading="lazy"
                   />
                 </div>
                 <h3 class="h6 fw-bold beneficio-titulo">
@@ -238,6 +192,7 @@
                     class="img-fluid"
                     width="60"
                     height="60"
+                    loading="lazy"
                   />
                 </div>
                 <h3 class="h6 fw-bold beneficio-titulo">
@@ -259,6 +214,7 @@
                     class="img-fluid"
                     width="60"
                     height="60"
+                    loading="lazy"
                   />
                 </div>
                 <h3 class="h6 fw-bold beneficio-titulo">
@@ -280,6 +236,7 @@
                     class="img-fluid"
                     width="60"
                     height="60"
+                    loading="lazy"
                   />
                 </div>
                 <h3 class="h6 fw-bold beneficio-titulo">
@@ -318,6 +275,7 @@
                   alt="Psicólogo João Victor"
                   class="img-fluid"
                   width="430"
+                  loading="lazy"
                 />
               </picture>
             </div>
@@ -443,6 +401,7 @@
                   class="img-fluid"
                   width="64"
                   height="64"
+                  loading="lazy"
                 />
               </div>
               <p class="mx-auto">
@@ -462,6 +421,8 @@
                   class="img-fluid"
                   width="64"
                   height="64"
+                  loading="lazy"
+                  
                 />
               </div>
               <p class="mx-auto">
@@ -481,6 +442,7 @@
                   class="img-fluid"
                   width="64"
                   height="64"
+                  loading="lazy"
                 />
               </div>
               <p class="mx-auto">
@@ -499,6 +461,7 @@
                   class="img-fluid"
                   width="64"
                   height="64"
+                  loading="lazy"
                 />
               </div>
               <p class="mx-auto">
@@ -524,7 +487,8 @@
         <div class="container py-5">
           <h1 class="text-center">O que você pode trabalhar na terapia?</h1>
           <p class="fs-5 w-75 mx-auto text-center">
-            Aqui você encontra um espaço seguro para falar sobre suas dores, compreender suas emoções e encontrar novos caminhos.
+            Aqui você encontra um espaço seguro para falar sobre suas dores,
+            compreender suas emoções e encontrar novos caminhos.
           </p>
 
           <div class="swiper swiper-terapia">
@@ -587,7 +551,11 @@
             </div>
           </div>
 
-          <p class="w-50 mx-auto text-center">Você não precisa enfrentar seus desafios sozinho(a). Permita-se encontrar apoio, acolhimento e um espaço para cuidar de si com leveza e confiança.</p>
+          <p class="w-50 mx-auto text-center">
+            Você não precisa enfrentar seus desafios sozinho(a). Permita-se
+            encontrar apoio, acolhimento e um espaço para cuidar de si com
+            leveza e confiança.
+          </p>
 
           <!-- Botão CTA -->
           <a
@@ -604,12 +572,13 @@
           <div class="row">
             <div class="col-12 col-lg-6">
               <picture>
-                <source srcset="./assets/images/Fac01.png" type="image/png" />
+                <source srcset="./assets/images/Fac03.webp" type="image/webp" />
                 <img
-                  src="./assets/images/Fac01.png"
+                  src="./assets/images/Fac03.webp"
                   alt="Psicólogo João Victor"
                   class="img-fluid"
                   width="430"
+                  loading="lazy"
                 />
               </picture>
             </div>

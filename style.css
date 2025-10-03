@@ -28,7 +28,46 @@ body {
   font-size: var(--font-size-base);
   background: var(--bg-color);
 }
+#depoimentos, #sobre , #duvidas{
+  scroll-margin-top: 250px;
+}
+ 
 
+.navbar-brand,
+.navbar-brand p {
+  color: var(--white-color) !important;
+}
+
+.navbar-brand {
+  position: relative;
+  font-family: var(--font-destaque);
+}
+
+.navbar-brand p {
+  position: absolute;
+  text-align: center;
+  font-size: 0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 62%;
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important; /* remove contorno */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.navbar-toggler-icon {
+  font-size: 25px;
+}
 .navbar-custom {
   transition: background-color 0.4s ease;
   background-color: transparent;
@@ -169,7 +208,7 @@ body {
 .btn-shine {
   position: relative;
   display: inline-block;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
   border-radius: 6px;
   overflow: hidden;
@@ -470,17 +509,15 @@ footer i {
   transform: scale(1.2);
 }
 
-@media (max-width: 991px) {
-  .banner {
-    height: 105vh;
-  }
+@media (max-width: 1024px) {
+
   .navbar-custom {
     background-color: rgba(255, 255, 255, 0.95) !important;
   }
 
   .beneficios {
-    height: 700px;
     top: -80px;
+    height: 700px;
     background-image: url("./assets/images/fundo-beneficios-tab.webp");
   }
   .funcionamento {

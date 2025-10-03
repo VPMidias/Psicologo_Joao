@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const SCROLL_LIMIT = 50; // alterado de 200 para 50
   const DESKTOP_WIDTH = 992;
 
-  updateNavbar();
+  updateNavbar(); 
   window.addEventListener("scroll", updateNavbar, { passive: true });
   window.addEventListener("resize", updateNavbar);
 

@@ -19,16 +19,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font-base);
-  font-size: var(--font-size-base);
-  background: var(--bg-color);
-}
-
-h1,h2{
-  font-family: var(--font-destaque);
-  font-weight: 600;
-}
 #depoimentos, #sobre , #duvidas{
   scroll-margin-top: 250px;
 }

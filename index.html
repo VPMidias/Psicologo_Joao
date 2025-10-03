@@ -143,10 +143,9 @@
               <img
                 src="./assets/images/foto-banner01.webp"
                 srcset="
-                  ./assets/images/foto-banner01-480.webp 480w,
-                  ./assets/images/foto-banner01-768.webp 768w,
-                  ./assets/images/foto-banner01-1200.webp 1200w,
-                  ./assets/images/foto-banner01-1600.webp 1600w
+                  ./assets/images/foto-banner01-480.webp   480w,
+                  ./assets/images/foto-banner01-768.webp   768w,
+                  ./assets/images/foto-banner01-1200.webp 1200w
                 "
                 alt="Psicólogo
               especialista"
@@ -262,19 +261,25 @@
               class="col-12 col-md-10 col-xl-6 mb-4 mb-lg-0 text-center bg-img"
             >
               <picture>
+                <!-- Versões em WebP -->
                 <source
-                  srcset="./assets/images/quemsou01.webp"
+                  srcset="
+                    ./assets/images/quemsou01-480.webp   480w,
+                    ./assets/images/quemsou01-768.webp   768w,
+                    ./assets/images/quemsou01-1200.webp 1200w
+                  "
+                  sizes="(max-width: 576px) 90vw,
+           (max-width: 1200px) 50vw,
+           430px"
                   type="image/webp"
                 />
-                <source
-                  srcset="./assets/images/quemsou01.png"
-                  type="image/png"
-                />
+                <!-- Fallback final -->
                 <img
-                  src="./assets/images/quemsou01.png"
+                  src="./assets/images/quemsou01-768.png"
                   alt="Psicólogo João Victor"
                   class="img-fluid"
                   width="430"
+                  height="auto"
                   loading="lazy"
                 />
               </picture>

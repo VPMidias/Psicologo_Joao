@@ -19,10 +19,11 @@
   box-sizing: border-box;
 }
 
-#depoimentos, #sobre , #duvidas{
+#depoimentos,
+#sobre,
+#duvidas {
   scroll-margin-top: 250px;
 }
- 
 
 .navbar-brand,
 .navbar-brand p {
@@ -226,6 +227,10 @@
 .duvidas {
   background: var(--white-color);
   padding: 4rem 0;
+}
+
+.duvidas h2{
+  font-family: var(--font-base) !important;
 }
 
 .accordion-item {
@@ -500,8 +505,15 @@ footer i {
   transform: scale(1.2);
 }
 
-@media (max-width: 1024px) {
+.nao-aceito-convenio {
+  margin: .3rem;
+  display: block;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--secondary-color); /* vermelho vinho */
+}
 
+@media (max-width: 1023px) {
   .navbar-custom {
     background-color: rgba(255, 255, 255, 0.95) !important;
   }
@@ -516,13 +528,22 @@ footer i {
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 950px) {
   .funcionamento {
     background-image: url("./assets/images/fundo-funcionamento-fone.webp");
     height: 1400px;
+    text-align: center;
+  }
+
+  .funcionamento p,
+  .trabalhar p {
+    width: 90% !important;
   }
 }
 @media (max-width: 575px) {
+  .funcionamento {
+    height: 1900px;
+  }
   .trabalhar .cta-button {
     width: 100%;
   }

@@ -48,16 +48,15 @@
     />
 
     <style>
-      
-      body{
-        background: #eeefea;
+      body {
+        background: #eeefea !important;
         font-family: "Inter", sans-serif;
         font-weight: 500;
       }
 
       h1,
       h2 {
-        font-family:"Abhaya Libre", sans-serif;
+        font-family: "Abhaya Libre", sans-serif;
         font-weight: 600;
       }
       .banner {
@@ -68,17 +67,17 @@
         overflow: hidden;
       }
 
-     .banner h1{
-      font-size: 2.5rem;
-     }
-      .banner h2{
+      .banner h1 {
+        font-size: 2.5rem;
+      }
+      .banner h2 {
         font-size: 1.7rem;
       }
       .img-banner {
         position: absolute;
-        bottom: 0;
+        bottom: -80px;
         right: 8%;
-        max-height: 90vh;
+        max-height: 105vh;
         width: auto;
       }
 
@@ -164,9 +163,7 @@
           <div class="row flex-column-reverse">
             <!-- Texto -->
             <div class="col-12 col-xl-6 text-white text-center text-xl-start">
-              <h1 class="fw-bold mb-4">
-                Psicólogo especialista em psicanálise
-              </h1>
+              <h1 class="fw-bold mb-4">Psicologo online</h1>
               <h2 class="lead mb-3">
                 Você não precisa enfrentar suas angústias sozinho. Aqui, sua voz
                 é ouvida com acolhimento e sigilo.
@@ -176,9 +173,12 @@
                 compreender emoções, fortalecer sua autoestima e alcançar
                 autoconhecimento.
               </p>
-              <a href="#contato" class="btn btn-primary btn-lg mt-3"
-                >Agendar consulta online</a
-              >
+              <div class="text-center text-lg-start">
+                <a href="#contato" class="btn btn-primary btn-lg mt-3 btn-shine"
+                  >Agendar consulta online</a
+                >
+                <span class="nao-aceito-convenio text-white">*Não aceito convênio</span>
+              </div>
             </div>
             <div class="col-12 col-xl-6 text-center">
               <img
@@ -357,12 +357,16 @@
                 análise pessoal, e estudo teórico continuo em grupos de estudo e
                 eventos da área.
               </p>
-              <a
-                href="https://wa.me/5511988210994"
-                target="_blank"
-                class="btn btn-primary mt-3 btn-shine"
-                >Agendar consulta online</a
-              >
+
+              <div class="text-center text-lg-start">
+                <a
+                  href="https://wa.me/5511988210994"
+                  target="_blank"
+                  class="btn btn-primary mt-3 btn-shine"
+                  >Agendar consulta online</a
+                >
+                <span class="nao-aceito-convenio">*Não aceito convênio</span>
+              </div>
             </div>
           </div>
         </div>
@@ -430,7 +434,7 @@
           <!-- Título da seção -->
           <header class="mb-5">
             <h1 class="text-white">Como funciona o atendimento ?</h1>
-            <p class="fs-5">
+            <p class="fs-5 mx-auto">
               Um caminho de escuta, acolhimento e reflexão, no seu tempo.
             </p>
           </header>
@@ -450,10 +454,32 @@
                   loading="lazy"
                 />
               </div>
+              <h1 class="text-white fs-5">Primeiro contato</h1>
               <p class="mx-auto">
                 A conversa inicial acontece pelo WhatsApp, de forma simples e
                 direta, para entendermos sua necessidade e esclarecer suas
                 dúvidas.
+              </p>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow"
+            >
+              <div class="my-3">
+                <img
+                  src="./assets/icons/agendar.webp"
+                  alt="Ícone de autoconhecimento"
+                  class="img-fluid"
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                />
+              </div>
+              <h1 class="text-white fs-5">Agendamento da sessão</h1>
+              <p class="mx-auto">
+                Definimos juntos o melhor dia e horário para o atendimento
+                online. Cada sessão dura entre 50 e 60 minutos, em frequência
+                ajustada de acordo com sua rotina.
               </p>
             </div>
 
@@ -470,13 +496,13 @@
                   loading="lazy"
                 />
               </div>
+              <h1 class="text-white fs-5">Sessões de escuta</h1>
               <p class="mx-auto">
                 Nos encontros, você encontra um espaço sigiloso, seguro e sem
                 julgamentos, onde pode compartilhar suas vivências, sentimentos
                 e pensamentos com liberdade.
               </p>
             </div>
-
             <div
               class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow"
             >
@@ -490,29 +516,11 @@
                   loading="lazy"
                 />
               </div>
+              <h1 class="text-white fs-5">Acompanhamento</h1>
               <p class="mx-auto">
                 O processo acontece no seu ritmo e pode favorecer novas
                 reflexões e percepções ao longo do tempo. Seguimos juntos
                 enquanto fizer sentido para você.
-              </p>
-            </div>
-            <div
-              class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center hover-grow"
-            >
-              <div class="my-3">
-                <img
-                  src="./assets/icons/perspectiva.webp"
-                  alt="Ícone de autoconhecimento"
-                  class="img-fluid"
-                  width="64"
-                  height="64"
-                  loading="lazy"
-                />
-              </div>
-              <p class="mx-auto">
-                Com o passar das sessões, vamos reconstruindo e entendendo
-                juntos a sua história e sua maneira de lidar com o mundo,
-                podendo assim abrir caminho para que algo novo possa surgir.
               </p>
             </div>
           </div>
@@ -524,6 +532,7 @@
           <!-- CTA -->
           <div class="mt-2">
             <a href="#" class="btn btn-light"> Agendar consulta online </a>
+            <span class="nao-aceito-convenio text-white">*Não aceito convênio</span>
           </div>
         </div>
       </section>
@@ -602,19 +611,21 @@
             leveza e confiança.
           </p>
 
-          <!-- Botão CTA -->
-          <a
-            href="https://wa.me/5511988210994"
-            target="_blank"
-            class="btn cta-button mx-auto btn-shine"
-            >Agendar consulta online</a
-          >
+          <div class="text-center">
+            <a
+              href="https://wa.me/5511988210994"
+              target="_blank"
+              class="btn cta-button mx-auto btn-shine"
+              >Agendar consulta online</a
+            >
+            <span class="nao-aceito-convenio">*Não aceito convênio</span>
+          </div>
         </div>
       </section>
 
       <section class="duvidas position-relative" id="duvidas">
         <div class="container">
-          <div class="row">
+          <div class="row text-center text-lg-start">
             <div class="col-12 col-lg-6">
               <picture>
                 <source srcset="./assets/images/Fac03.webp" type="image/webp" />
@@ -622,7 +633,7 @@
                   src="./assets/images/Fac03.webp"
                   alt="Psicólogo João Victor"
                   class="img-fluid"
-                  width="430"
+                  width="500"
                   loading="lazy"
                 />
               </picture>
@@ -758,12 +769,15 @@
                 </div>
               </div>
 
-              <a
-                href="https://wa.me/5511988210994"
-                target="_blank"
-                class="btn btn-primary mt-3 mx-auto btn-shine"
-                >Agendar consulta online</a
-              >
+              <div class="text-center text-lg-start">
+                <a
+                  href="https://wa.me/5511988210994"
+                  target="_blank"
+                  class="btn btn-primary mt-3 mx-auto btn-shine"
+                  >Agendar consulta online</a
+                >
+                <span class="nao-aceito-convenio">*Não aceito convênio</span>
+              </div>
             </div>
           </div>
         </div>

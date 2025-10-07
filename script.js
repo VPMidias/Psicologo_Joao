@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
 
   const navbar = document.querySelector(".navbar");
-  const SCROLL_LIMIT = 50; // alterado de 200 para 50
+  const SCROLL_LIMIT = 20; // alterado de 200 para 50
   const DESKTOP_WIDTH = 992;
 
   updateNavbar(); 

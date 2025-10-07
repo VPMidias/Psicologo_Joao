@@ -68,4 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.classList.remove("navbar-scrolled");
     }
   }
+
+  const labelAno = document.querySelector('#ano');
+  const anoAtual = new Date().getFullYear();
+
+  labelAno.innerText = anoAtual
+
 });

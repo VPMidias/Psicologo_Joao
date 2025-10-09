@@ -121,20 +121,34 @@
               </div>
             </div>
             <div class="col-12 col-lg-6 text-center bg-img-banner">
-              <img
-                src="./assets/images/foto-banner01.webp"
-                srcset="
-                  ./assets/images/foto-banner01-480.webp   480w,
-                  ./assets/images/foto-banner01-768.webp   768w,
-                  ./assets/images/foto-banner01-1200.webp 1200w
-                "
-                alt="Psicólogo
-              especialista"
-                class="img-banner"
-                decoding="async"
-                fetchpriority="high"
-              />
-            </div>
+              <picture>
+                <!-- Imagem exibida SOMENTE em telas até 1024px -->
+                <source
+                  srcset="./assets/images/foto-banner02.webp"
+                  media="(max-width: 1024px)"
+                  type="image/webp"
+                />
+
+                <!-- Imagens padrão para telas maiores -->
+                <source
+                  srcset="
+                    ./assets/images/foto-banner01-480.webp   480w,
+                    ./assets/images/foto-banner01-768.webp   768w,
+                    ./assets/images/foto-banner01-1200.webp 1200w
+                  "
+                  type="image/webp"
+                />
+
+                <!-- Fallback -->
+                <img
+                  src="./assets/images/foto-banner01.webp"
+                  alt="Psicólogo especialista"
+                  class="img-banner"
+                  decoding="async"
+                  fetchpriority="high"
+                />
+              </picture>
+          </div>
           </div>
         </div>
       </section>

@@ -15,7 +15,10 @@
 
   <!-- Pré Carregaemnto da imagem-->
    <link rel="preload" as="image" href="../assets/images/quemsou01-1200.webp" type="image/webp" imagesrcset="
-    ../assets/images/quemsou01-1200.webp  1200w,
+    ../assets/images/foto-banner01-480.webp   480w,
+    ../assets/images/foto-banner01-768.webp   768w,
+    ../assets/images/foto-banner01-1200.webp  1200w,
+    ../assets/images/foto-banner01-1600.webp  1600w
   " imagesizes="(max-width: 576px) 90vw,
               (max-width: 1200px) 50vw,
               600px" />
@@ -94,7 +97,11 @@
     </div>
     <div class="hero-visual reveal">
       <div class="hero-glow"></div>
-      <img class="hero-photo" src="../assets/images/quemsou01-1200.webp" alt="João Vitor Pavanelli, psicólogo">
+      <picture class="hero-photo">
+        <source srcset="../assets/images/quemsou01-1200.webp" type="image/webp">
+        <source srcset="../assets/images/quemsou01-1200.jpg" type="image/jpeg">
+        <img src="../assets/images/quemsou01-1200.jpg" alt="João Vitor Pavanelli, psicólogo" loading="eager" decoding="async" fetchpriority="high">
+      </picture>
       </div>
     </div>
   </div>
@@ -118,7 +125,7 @@
       </article>
       <article class="card reveal">
         <div class="card-icon">
-          <img src="../assets/icons/dificuldades-b.webp" alt="Ícone de alívio da ansiedade" class="img-fluid" width="30" height="30" loading="lazy" />
+          <img src="../assets/icons/dificuldades.webp" alt="Ícone de alívio da ansiedade" class="img-fluid" width="30" height="30" loading="lazy" />
         </div>
         <h3>Dificuldade pra começar</h3>
         <p>As tarefas se acumulam, o tempo passa e você sente que está sempre travado, como se algo te segurasse.</p>
@@ -132,7 +139,7 @@
       </article>
       <article class="card reveal">
         <div class="card-icon">
-          <img src="../assets/icons/depressao-b.webp" alt="Ícone de autoestima" class="img-fluid" width="30" height="30" loading="lazy" />
+          <img src="../assets/icons/depressao.webp" alt="Ícone de autoestima" class="img-fluid" width="30" height="30" loading="lazy" />
         </div>
         <h3>Dificuldade no dia a dia</h3>
         <p>Coisas básicas do dia a dia, como pegar ônibus ou ir ao mercado começaram a parecer um grande esforço.</p>
@@ -184,7 +191,11 @@
 <section class="section" id="sobre" style="background:#f6f7f9">
   <div class="container about-grid">
     <div class="about-photo-wrap reveal">
-      <img class="about-photo" src="../assets/images/quemsou01-1200.webp" alt="João Vitor Pavanelli">
+      <picture class="about-photo">
+        <source srcset="../assets/images/quemsou01-1200.webp" type="image/webp">
+        <source srcset="../assets/images/quemsou01-1200.jpg" type="image/jpeg">
+        <img src="../assets/images/quemsou01-1200.jpg" alt="João Vitor Pavanelli, psicólogo" loading="eager" decoding="async" fetchpriority="high">
+      </picture>
     </div>
     <div class="reveal">
       <p class="eyebrow">Sobre mim</p>

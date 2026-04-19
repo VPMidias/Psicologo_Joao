@@ -12,7 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.min.css" />
+
+  
 
   <!-- Google Tag Manager -->
   <script>
@@ -43,6 +44,8 @@
     }
   </script>
   <!-- End Google Tag Manager -->
+
+  <link rel="stylesheet" href="style.min.css"/>
 </head>
 
 <body>
@@ -110,7 +113,7 @@
       </article>
       <article class="card reveal">
         <div class="card-icon">
-          <img src="../assets/icons/dificuldades-b.webp" alt="Ícone de alívio da ansiedade" class="img-fluid" width="30" height="30" loading="lazy" />
+          <img src="../assets/icons/dificuldades.webp" alt="Ícone de alívio da ansiedade" class="img-fluid" width="30" height="30" loading="lazy" />
         </div>
         <h3>Dificuldade pra começar</h3>
         <p>As tarefas se acumulam, o tempo passa e você sente que está sempre travado, como se algo te segurasse.</p>
@@ -124,7 +127,7 @@
       </article>
       <article class="card reveal">
         <div class="card-icon">
-          <img src="../assets/icons/depressao-b.webp" alt="Ícone de autoestima" class="img-fluid" width="30" height="30" loading="lazy" />
+          <img src="../assets/icons/depressao.webp" alt="Ícone de autoestima" class="img-fluid" width="30" height="30" loading="lazy" />
         </div>
         <h3>Dificuldade no dia a dia</h3>
         <p>Coisas básicas do dia a dia, como pegar ônibus ou ir ao mercado começaram a parecer um grande esforço.</p>
@@ -146,16 +149,24 @@
     </div>
     <div class="grid grid-3">
       <article class="card reveal">
-        <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <h3>Mais clareza</h3><p>Entenda o que dispara sua ansiedade e por que certos padrões insistem em se repetir.</p>
+        <div class="card-icon">
+          <img src="../assets/icons/ansiedade-b.webp" alt="Ícone de autoestima" class="img-fluid" width="30" height="30" loading="lazy" />
+        </div>
+        <h3>Mais clareza</h3>
+        <p>Entenda o que dispara sua ansiedade e por que certos padrões insistem em se repetir.</p>
       </article>
       <article class="card reveal">
-        <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V12"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M12 2v10"/><path d="M7 7l5 5 5-5"/></svg></div>
+        <div class="card-icon">
+          <img src="../assets/icons/mentalidade-b.webp" alt="Ícone de autoestima" class="img-fluid" width="30" height="30" loading="lazy" />
+        </div>
         <h3>Menos sobrecarga</h3><p>Organize pensamentos e sentimentos que hoje parecem confusos, pesados ou difíceis de nomear.</p>
       </article>
       <article class="card reveal">
-        <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18"/><path d="M6 9l6-6 6 6"/></svg></div>
-        <h3>Mais autonomia</h3><p>Desenvolva recursos emocionais para lidar melhor com a rotina, seus vínculos e suas escolhas.</p>
+        <div class="card-icon">
+          <img src="../assets/icons/inteligencia-emocional-b.webp" alt="Ícone de autoestima" class="img-fluid" width="30" height="30" loading="lazy" />
+        </div>
+        <h3>Mais autonomia</h3>
+        <p>Desenvolva recursos emocionais para lidar melhor com a rotina, seus vínculos e suas escolhas.</p>
       </article>
     </div>
     <div class="section-cta" >
@@ -519,8 +530,8 @@
   const KEY = 'jv-wa-closed';
   const show = () => waPopup.classList.add('show');
   const hide = () => { waPopup.classList.remove('show'); localStorage.setItem(KEY, '1'); };
-  // Auto-open after 5s regardless of localStorage (always show on fresh load)
-  setTimeout(show, 5000);
+  // Auto-open after 3s regardless of localStorage (always show on fresh load)
+  setTimeout(show, 3000);
   // Close button
   waClose.addEventListener('click', e => { e.stopPropagation(); hide(); });
   // Toggle button: if popup hidden → show; if popup showing → follow link

@@ -530,8 +530,8 @@
   const KEY = 'jv-wa-closed';
   const show = () => waPopup.classList.add('show');
   const hide = () => { waPopup.classList.remove('show'); localStorage.setItem(KEY, '1'); };
-  // Auto-open after 3s regardless of localStorage (always show on fresh load)
-  setTimeout(show, 3000);
+  // Auto-open after 8s regardless of localStorage (always show on fresh load)
+  setTimeout(show, 8000);
   // Close button
   waClose.addEventListener('click', e => { e.stopPropagation(); hide(); });
   // Toggle button: if popup hidden → show; if popup showing → follow link
